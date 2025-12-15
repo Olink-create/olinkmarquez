@@ -35,6 +35,33 @@
     footer{margin-top:28px;padding:18px 0;color:var(--muted);font-size:14px;text-align:center} 
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px}
     @media(max-width:880px){.hero{grid-template-columns:1fr;}.logo{width:48px;height:48px}.about{flex-direction:column;align-items:flex-start}}
+.sectores {
+  margin-top: 16px;
+}
+
+.sector {
+  background: #ffffff;
+  border: 1px solid #eef2f7;
+  border-radius: 12px;
+  padding: 14px 10px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.sector:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+.sector span {
+  display: block;
+}
   </style>
 </head>
 
@@ -127,33 +154,6 @@
     <div class="sector">🧼<span>Empresas de limpieza</span></div>
   </div>
 </section>
-.sectores {
-  margin-top: 16px;
-}
-
-.sector {
-  background: #ffffff;
-  border: 1px solid #eef2f7;
-  border-radius: 12px;
-  padding: 14px 10px;
-  text-align: center;
-  font-size: 14px;
-  color: var(--muted);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-
-.sector:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
-}
-
-.sector span {
-  display: block;
-}
 
 
   <!-- Experiencia -->
