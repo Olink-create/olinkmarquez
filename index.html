@@ -62,26 +62,69 @@
 .sector span {
   display: block;
 }
+/* Botón hamburguesa oculto en escritorio */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+/* Adaptación móvil */
+@media(max-width:880px){
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .nav-links a {
+    margin-left: 0;
+    padding: 8px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
   </style>
 </head>
 
 <body>
 <div class="container">
   <!-- Header -->
-  <header>
-    <div class="brand">
-      <div class="logo">OM</div>
-      <div>
-        <div style="font-weight:700">OLINK MARQUEZ</div>
-        <div style="font-size:12px;color:var(--muted)">AUDITORES Y FORMADORES S.L.</div>
-      </div>
+ <header>
+  <div class="brand">
+    <div class="logo">OM</div>
+    <div>
+      <div style="font-weight:700">OLINK MARQUEZ</div>
+      <div style="font-size:12px;color:var(--muted)">AUDITORES Y FORMADORES S.L.</div>
     </div>
-    <nav>
-      <a href="#servicios">Servicios</a>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
+  </div>
+
+  <!-- Botón hamburguesa -->
+  <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+  <!-- Navegación -->
+  <nav class="nav-links">
+    <a href="#servicios">Servicios</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
 
   <!-- Hero -->
   <section class="hero">
@@ -237,5 +280,11 @@
   <a href="https://wa.me/34656439232" style="position:fixed;bottom:20px;right:20px;background:#25d366;color:white;padding:14px 18px;border-radius:50%;font-size:22px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.18);z-index:100;transition:.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">💬</a>
 
 </div>
+<script>
+  function toggleMenu() {
+    const nav = document.querySelector('.nav-links');
+    nav.classList.toggle('active');
+  }
+</script>
 </body>
 </html>
