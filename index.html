@@ -105,6 +105,32 @@
       .logo { width: 48px; height: 48px; }
       .about { flex-direction: column; align-items: flex-start; }
     }
+/* Animación de entrada */
+@keyframes slideUpFade {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.hero .card, .hero aside {
+  animation: slideUpFade 0.8s ease-out forwards;
+}
+
+/* Hover suave para tarjeta y foto */
+.hero .card:hover, .hero aside:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.18);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero aside img {
+  border-radius: 18px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero aside img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+}
   </style>
 </head>
 
