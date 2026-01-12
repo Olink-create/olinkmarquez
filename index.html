@@ -267,9 +267,9 @@
   <p style="color:var(--muted)">¿Quieres un presupuesto o más información? Escríbenos o rellena el formulario.</p>
   <div style="display:flex;gap:18px;flex-wrap:wrap">
 
-    <!-- Formulario -->
-   <div style="flex:1;min-width:260px">
-  <form action="https://formspree.io/f/mykkyjjo" method="POST">
+   <!-- Formulario -->
+<div style="flex:1;min-width:260px">
+  <form id="contactForm" action="https://formspree.io/f/mykkyjjo" method="POST">
     <input type="text" name="nombre" placeholder="Nombre" required />
     <input type="email" name="email" placeholder="Correo electrónico" required />
     <input type="text" name="empresa" placeholder="Empresa / actividad" />
@@ -284,6 +284,42 @@
     <button class="btn" type="submit">Enviar</button>
     <button class="btn" type="button" onclick="window.open('https://wa.me/34656439232','_blank')">WhatsApp Directo</button>
   </form>
+
+  <!-- Mensaje de gracias oculto -->
+  <div id="formThanks" style="display:none; margin-top:12px; color:green; font-weight:600;">
+    ¡Gracias! Tu mensaje ha sido enviado. Te responderemos pronto.
+  </div>
+</div>
+
+<script>
+  const form = document.getElementById('contactForm');
+  const thanks = document.getElementById('formThanks');
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Evita el envío normal
+    const data = new FormData(form);
+
+    fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+      if (response.ok) {
+        form.style.display = 'none'; // Oculta el formulario
+        thanks.style.display = 'block'; // Muestra el mensaje
+      } else {
+        response.json().then(data => {
+          alert(data.error || 'Oops! Ha ocurrido un error.');
+        })
+      }
+    })
+    .catch(error => {
+      alert('Oops! Ha ocurrido un error.');
+    });
+  });
+</script>
+
 </div>
  
 
