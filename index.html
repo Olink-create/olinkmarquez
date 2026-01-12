@@ -308,6 +308,14 @@
       if (response.ok) {
         form.style.display = 'none'; // Oculta el formulario
         thanks.style.display = 'block'; // Muestra el mensaje
+
+        // Después de 5 segundos, vuelve a mostrar el formulario
+        setTimeout(() => {
+          form.reset();        // Limpia los campos
+          form.style.display = 'block';
+          thanks.style.display = 'none';
+        }, 5000);
+
       } else {
         response.json().then(data => {
           alert(data.error || 'Oops! Ha ocurrido un error.');
