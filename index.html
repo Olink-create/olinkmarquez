@@ -72,6 +72,8 @@
       background: var(--accent); color: white; border-radius: 8px;
       text-decoration: none; transition: transform .2s, box-shadow .2s;
       box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      border: none;
+      cursor: pointer;
     }
     .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 14px rgba(0,0,0,0.2); }
 
@@ -103,34 +105,49 @@
       .nav-links.active { display: flex; }
       .hero { grid-template-columns: 1fr; }
       .logo { width: 48px; height: 48px; }
-      .about { flex-direction: column; align-items: flex-start; }
+
+      /* ✅ Mejoras móvil "Sobre mí" */
+      .about { flex-direction: column; align-items: center; text-align: center; }
+      .about img {
+        width: 130px !important;
+        height: 130px !important;
+        margin: 0 auto 6px auto;
+        object-fit: contain !important;   /* ✅ evita recorte */
+        object-position: center;
+        background: white;
+      }
     }
-/* Animación de entrada */
-@keyframes slideUpFade {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
 
-.hero .card, .hero aside {
-  animation: slideUpFade 0.8s ease-out forwards;
-}
+    /* (Opcional) Si quieres ocultar la foto en móviles muy pequeños, descomenta:
+    @media(max-width:420px){
+      .about img { display:none; }
+    }
+    */
 
-/* Hover suave para tarjeta y foto */
-.hero .card:hover, .hero aside:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 16px 32px rgba(0,0,0,0.18);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    /* Animación de entrada */
+    @keyframes slideUpFade {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
 
-.hero aside img {
-  border-radius: 18px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .hero .card, .hero aside { animation: slideUpFade 0.8s ease-out forwards; }
 
-.hero aside img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.2);
-}
+    /* Hover suave para tarjeta y foto */
+    .hero .card:hover, .hero aside:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 16px 32px rgba(0,0,0,0.18);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero aside img {
+      border-radius: 18px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero aside img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 
@@ -153,45 +170,79 @@
     </nav>
   </header>
 
-<!-- Hero -->
-<section class="hero">
-  <div>
-    <div class="card" style="border-left:6px solid #FF6F3C;">
-      <h1>Auditorías higiénico-sanitarias profesionales</h1>
-      <p class="lead">Soluciones prácticas, seguras y ajustadas a la normativa para hostelería, alimentación y producción alimentaria en Málaga y provincia.</p>
-      <ul style="color:var(--muted);font-size:14px;line-height:1.6;margin:0 0 16px 0">
-        <li>✔ Auditorías completas</li>
-        <li>✔ APPCC y planes de autocontrol</li>
-        <li>✔ Toma de muestras y analíticas</li>
-        <li>✔ Formación certificada</li>
-      </ul>
-      <a class="btn" href="#contacto">Pedir presupuesto</a>
+  <!-- Hero -->
+  <section class="hero">
+    <div>
+      <div class="card" style="border-left:6px solid #FF6F3C;">
+        <h1>Auditorías higiénico-sanitarias profesionales</h1>
+        <p class="lead">Soluciones prácticas, seguras y ajustadas a la normativa para hostelería, alimentación y producción alimentaria en Málaga y provincia.</p>
+        <ul style="color:var(--muted);font-size:14px;line-height:1.6;margin:0 0 16px 0">
+          <li>✔ Auditorías completas</li>
+          <li>✔ APPCC y planes de autocontrol</li>
+          <li>✔ Toma de muestras y analíticas</li>
+          <li>✔ Formación certificada</li>
+        </ul>
+        <a class="btn" href="#contacto">Pedir presupuesto</a>
+      </div>
     </div>
-  </div>
-  <aside>
-    <div class="card">
-      <h3>¿Por qué elegirnos?</h3>
-      <ul style="margin:8px 0 0 18px;color:var(--muted)">
-        <li>Más de 25 años de experiencia veterinaria</li>
-        <li>Especialista en seguridad alimentaria</li>
-        <li>Auditorías claras y accionables</li>
-        <li>Formación útil y certificada</li>
-        <li>Trato cercano y profesional</li>
-      </ul>
+    <aside>
+      <div class="card">
+        <h3>¿Por qué elegirnos?</h3>
+        <ul style="margin:8px 0 0 18px;color:var(--muted)">
+          <li>Más de 25 años de experiencia veterinaria</li>
+          <li>Especialista en seguridad alimentaria</li>
+          <li>Auditorías claras y accionables</li>
+          <li>Formación útil y certificada</li>
+          <li>Trato cercano y profesional</li>
+        </ul>
+      </div>
+    </aside>
+  </section>
+
+  <!-- ✅ Servicios -->
+  <section class="card" style="margin-top:28px" id="servicios">
+    <h3>Servicios</h3>
+    <p style="color:var(--muted);margin-top:6px">
+      Servicios diseñados para cumplir normativa, reducir riesgos y mejorar procesos con acciones claras.
+    </p>
+
+    <div class="grid" style="margin-top:16px">
+      <div class="card">
+        <h4 style="margin:0 0 6px">Auditorías higiénico-sanitarias</h4>
+        <p style="margin:0;color:var(--muted);font-size:14px">
+          Revisión de instalaciones, procesos, documentación y personal con informe práctico y plan de mejoras.
+        </p>
+      </div>
+      <div class="card">
+        <h4 style="margin:0 0 6px">APPCC y autocontroles</h4>
+        <p style="margin:0;color:var(--muted);font-size:14px">
+          Elaboración/actualización de APPCC, planes generales de higiene, registros y verificación.
+        </p>
+      </div>
+      <div class="card">
+        <h4 style="margin:0 0 6px">Toma de muestras y analíticas</h4>
+        <p style="margin:0;color:var(--muted);font-size:14px">
+          Muestreos de superficies, alimentos y agua con interpretación de resultados y medidas correctoras.
+        </p>
+      </div>
+      <div class="card">
+        <h4 style="margin:0 0 6px">Formación certificada</h4>
+        <p style="margin:0;color:var(--muted);font-size:14px">
+          Formación in-company y certificación de manipuladores: útil, clara y orientada a tu actividad.
+        </p>
+      </div>
     </div>
-  </aside>
-</section>
+  </section>
 
-
-  <!-- Sobre mí -->
-  <section class="about card" id="sobre-mi">
+  <!-- ✅ Sobre mí (texto actualizado) -->
+  <section class="about card" id="sobre-mi" style="margin-top:28px">
     <img src="foto_miguel.jpg" alt="Foto de Miguel Marfil" loading="lazy"
          style="width:160px;height:160px;border-radius:50%;object-fit:cover;border:4px solid white;box-shadow:0 6px 18px rgba(0,0,0,0.18)" />
     <div>
       <h3>Sobre mí</h3>
       <p style="color:var(--muted)">
         Veterinario especializado en higiene alimentaria. Tras años de trabajo en inspección y formación,
-        <strong>fundamos Olink Marquez</strong> para ofrecer servicios personalizados a empresas del sector alimentario.
+        <strong>fundé junto a Nieves Márquez la empresa Olink Marquez</strong>, dedicándome a la parte técnica mientras Nieves gestiona la organización y administración de la empresa.
       </p>
       <p style="margin:8px 0;color:var(--muted)">
         <strong>Servicios clave:</strong> auditorías, toma de muestras, elaboración de APPCC, formación in-company, certificación de manipuladores y peritajes higiénico-sanitarios acreditados.
@@ -226,9 +277,9 @@
   </section>
 
   <!-- Experiencia -->
-  <section class="card grid" style="margin-top:28px" id="experiencia">
+  <section class="card" style="margin-top:28px" id="experiencia">
     <h3>Experiencia Profesional</h3>
-    <div style="font-size:14px;color:var(--muted)">
+    <div style="font-size:14px;color:var(--muted);display:grid;gap:10px;margin-top:10px">
       <div><strong>DEFRA – Reino Unido</strong><br>Control de la epidemia de Fiebre Aftosa, inspecciones y estudios epidemiológicos.</div>
       <div><strong>Instituto Andaluz de Patología Infecciosa</strong><br>Trabajo como microbiólogo, parasitólogo, hematólogo y anatomopatólogo.</div>
       <div><strong>Servicio Andaluz de Salud</strong><br>Interino como veterinario de apoyo en varias agrupaciones provinciales.</div>
@@ -239,9 +290,9 @@
   </section>
 
   <!-- Certificaciones -->
-  <section class="card grid" style="margin-top:28px" id="certificaciones">
+  <section class="card" style="margin-top:28px" id="certificaciones">
     <h3>Certificaciones y Trayectoria Profesional</h3>
-    <div style="font-size:14px;color:var(--muted)">
+    <div style="font-size:14px;color:var(--muted);display:grid;gap:10px;margin-top:10px">
       <div><strong>🎓 Licenciado en Veterinaria</strong><br>Universidad de Córdoba — 1998</div>
       <div><strong>🏛️ Colegiación Veterinaria</strong><br>Ilustre Colegio Oficial de Veterinarios de Málaga — Nº 904</div>
       <div><strong>🛡️ Máster en Prevención de Riesgos Laborales</strong><br>Higiene Industrial, Seguridad en el Trabajo, Ergonomía y Psicosociología Aplicada (2008–2009)</div>
@@ -252,110 +303,102 @@
   </section>
 
   <!-- Testimonios -->
-  <section class="card grid" style="margin-top:28px">
+  <section class="card" style="margin-top:28px">
     <h3>Testimonios</h3>
-    <div style="font-size:14px;color:var(--muted)">
+    <div style="font-size:14px;color:var(--muted);display:grid;gap:10px;margin-top:10px">
       <div>⭐️⭐️⭐️⭐️⭐️ — "Un servicio impecable. Las auditorías son claras y muy prácticas. Miguel nos ha ayudado muchísimo a mejorar los procesos."</div>
       <div>⭐️⭐️⭐️⭐️⭐️ — "Formación excelente, muy cercana y útil para el personal. Lo recomendamos totalmente."</div>
       <div>⭐️⭐️⭐️⭐️⭐️ — "Profesionalidad y resultados. Muy satisfechos con las auditorías y el seguimiento mensual."</div>
     </div>
   </section>
 
-  <!-- Contacto -->
-<section class="card contact" style="margin-top:28px" id="contacto">
-  <h3>Contacto</h3>
-  <p style="color:var(--muted)">¿Quieres un presupuesto o más información? Escríbenos o rellena el formulario.</p>
-  <div style="display:flex;gap:18px;flex-wrap:wrap">
+  <!-- ✅ Contacto (corregido) -->
+  <section class="card contact" style="margin-top:28px" id="contacto">
+    <h3>Contacto</h3>
+    <p style="color:var(--muted)">¿Quieres un presupuesto o más información? Escríbenos o rellena el formulario.</p>
 
-   <!-- Formulario -->
-<div style="flex:1;min-width:260px">
-  <form id="contactForm" action="https://formspree.io/f/mykkyjjo" method="POST">
-    <input type="text" name="nombre" placeholder="Nombre" required />
-    <input type="email" name="email" placeholder="Correo electrónico" required />
-    <input type="text" name="empresa" placeholder="Empresa / actividad" />
-    <textarea name="mensaje" rows="5" placeholder="Mensaje / detalles" required></textarea>
+    <div style="display:flex;gap:18px;flex-wrap:wrap">
+      <!-- Formulario -->
+      <div style="flex:1;min-width:260px">
+        <form id="contactForm" action="https://formspree.io/f/mykkyjjo" method="POST">
+          <input type="text" name="nombre" placeholder="Nombre" required />
+          <input type="email" name="email" placeholder="Correo electrónico" required />
+          <input type="text" name="empresa" placeholder="Empresa / actividad" />
+          <textarea name="mensaje" rows="5" placeholder="Mensaje / detalles" required></textarea>
 
-    <!-- Checkbox RGPD -->
-    <label style="font-size:12px;color:var(--muted);margin-top:6px;display:block">
-      <input type="checkbox" required style="margin-right:6px">
-      Acepto la <a href="/privacidad.html" target="_blank">Política de privacidad</a>
-    </label>
+          <!-- Checkbox RGPD -->
+          <label style="font-size:12px;color:var(--muted);margin-top:6px;display:block">
+            <input type="checkbox" required style="margin-right:6px">
+            Acepto la <a href="/privacidad.html" target="_blank">Política de privacidad</a>
+          </label>
 
-    <button class="btn" type="submit">Enviar</button>
-    <button class="btn" type="button" onclick="window.open('https://wa.me/34656439232','_blank')">WhatsApp Directo</button>
-  </form>
+          <button class="btn" type="submit">Enviar</button>
+          <button class="btn" type="button" onclick="window.open('https://wa.me/34656439232','_blank')">WhatsApp Directo</button>
+        </form>
 
-  <!-- Mensaje de gracias oculto -->
-  <div id="formThanks" style="display:none; margin-top:12px; color:green; font-weight:600;">
-    ¡Gracias! Tu mensaje ha sido enviado. Te responderemos pronto.
-  </div>
-</div>
-
-<script>
-  const form = document.getElementById('contactForm');
-  const thanks = document.getElementById('formThanks');
-
-  form.addEventListener('submit', function(e) {
-    e.preventDefault(); // Evita el envío normal
-    const data = new FormData(form);
-
-    fetch(form.action, {
-      method: form.method,
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(response => {
-      if (response.ok) {
-        form.style.display = 'none'; // Oculta el formulario
-        thanks.style.display = 'block'; // Muestra el mensaje
-
-        // Después de 5 segundos, vuelve a mostrar el formulario
-        setTimeout(() => {
-          form.reset();        // Limpia los campos
-          form.style.display = 'block';
-          thanks.style.display = 'none';
-        }, 5000);
-
-      } else {
-        response.json().then(data => {
-          alert(data.error || 'Oops! Ha ocurrido un error.');
-        })
-      }
-    })
-    .catch(error => {
-      alert('Oops! Ha ocurrido un error.');
-    });
-  });
-</script>
-
-</div>
- 
-
-    <!-- Info Corporativa -->
-    <div style="width:260px;min-width:200px">
-      <div style="padding:12px;border-radius:8px;background:#fff;border:1px solid #eef2f7">
-        <strong>OLINK MARQUEZ AUDITORES Y FORMADORES S.L.</strong>
-        <div style="margin-top:8px;color:var(--muted);font-size:14px">Miguel Marfil — Veterinario</div>
-        <div style="margin-top:12px;color:var(--muted);font-size:14px">Tel: 656439232</div>
-        <div style="color:var(--muted);font-size:14px">
-          Email: <a href="mailto:info@olinkmarquez.com" style="color:var(--muted); text-decoration:none;">info@olinkmarquez.com</a>
+        <!-- Mensaje de gracias oculto -->
+        <div id="formThanks" style="display:none; margin-top:12px; color:green; font-weight:600;">
+          ¡Gracias! Tu mensaje ha sido enviado. Te responderemos pronto.
         </div>
-        <div style="margin-top:10px;color:var(--muted);font-size:13px">
-          Málaga y provincia — Servicio especializado en seguridad alimentaria
+
+        <script>
+          const form = document.getElementById('contactForm');
+          const thanks = document.getElementById('formThanks');
+
+          form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const data = new FormData(form);
+
+            fetch(form.action, {
+              method: form.method,
+              body: data,
+              headers: { 'Accept': 'application/json' }
+            })
+            .then(response => {
+              if (response.ok) {
+                form.style.display = 'none';
+                thanks.style.display = 'block';
+
+                setTimeout(() => {
+                  form.reset();
+                  form.style.display = 'block';
+                  thanks.style.display = 'none';
+                }, 5000);
+
+              } else {
+                response.json().then(data => {
+                  alert(data.error || 'Oops! Ha ocurrido un error.');
+                })
+              }
+            })
+            .catch(() => {
+              alert('Oops! Ha ocurrido un error.');
+            });
+          });
+        </script>
+      </div>
+
+      <!-- Info Corporativa -->
+      <div style="width:260px;min-width:200px">
+        <div style="padding:12px;border-radius:8px;background:#fff;border:1px solid #eef2f7">
+          <strong>OLINK MARQUEZ AUDITORES Y FORMADORES S.L.</strong>
+          <div style="margin-top:8px;color:var(--muted);font-size:14px">Miguel Marfil — Veterinario</div>
+          <div style="margin-top:12px;color:var(--muted);font-size:14px">Tel: 656439232</div>
+          <div style="color:var(--muted);font-size:14px">
+            Email: <a href="mailto:info@olinkmarquez.com" style="color:var(--muted); text-decoration:none;">info@olinkmarquez.com</a>
+          </div>
+          <div style="margin-top:10px;color:var(--muted);font-size:13px">
+            Málaga y provincia — Servicio especializado en seguridad alimentaria
+          </div>
         </div>
       </div>
     </div>
 
-  </div>
-</section>
-
     <!-- Enlace a privacidad -->
-    <div style="margin-top:8px;font-size:12px;color:var(--muted);">
+    <div style="margin-top:10px;font-size:12px;color:var(--muted);">
       <a href="/privacidad.html" target="_blank">Política de privacidad</a>
     </div>
-
-  </div>
-</section>
+  </section>
 
   <!-- Firma -->
   <section class="card" style="margin-top:28px;text-align:center;padding:28px">
@@ -372,7 +415,10 @@
   </footer>
 
   <!-- Botón WhatsApp -->
-  <a href="https://wa.me/34656439232" style="position:fixed;bottom:20px;right:20px;background:#25d366;color:white;padding:14px 18px;border-radius:50%;font-size:22px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.18);z-index:100;transition:.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">💬</a>
+  <a href="https://wa.me/34656439232"
+     style="position:fixed;bottom:20px;right:20px;background:#25d366;color:white;padding:14px 18px;border-radius:50%;font-size:22px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.18);z-index:100;transition:.2s;"
+     onmouseover="this.style.transform='scale(1.1)'"
+     onmouseout="this.style.transform='scale(1)'">💬</a>
 </div>
 
 <script>
