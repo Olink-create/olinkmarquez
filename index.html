@@ -3,9 +3,6 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
- <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-S1L89Z4E31"></script>
@@ -16,7 +13,7 @@
     gtag('config', 'G-S1L89Z4E31');
   </script>
 
-  <title>Auditor Higiénico-Sanitario en Málaga | OLINK MARQUEZ</title> <title>Auditor Higiénico-Sanitario en Málaga | OLINK MARQUEZ</title>
+  <title>Auditor Higiénico-Sanitario en Málaga | OLINK MARQUEZ</title>
   <link rel="icon" type="image/png" href="favicon_om.png" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
 
@@ -25,8 +22,8 @@
 
   <style>
     :root {
-      --accent: #FF6F3C; /* color principal naranja */
-      --accent2: #00BCD4; /* color secundario azul */
+      --accent: #FF6F3C;
+      --accent2: #00BCD4;
       --muted: #6b7280;
       --bg: #f7fafc;
       --card: #ffffff;
@@ -36,7 +33,6 @@
     body { font-family: Inter, system-ui, sans-serif; margin: 0; background: var(--bg); color: #0f172a; line-height: 1.55; }
     .container { max-width: 1000px; margin: 0 auto; padding: 28px; }
 
-    /* Header */
     header {
       display: flex; align-items: center; justify-content: space-between;
       padding: 12px 0; position: sticky; top: 0;
@@ -44,37 +40,43 @@
       background: rgba(255,255,255,0.9);
       z-index: 50; box-shadow: 0 2px 6px rgba(0,0,0,0.05);
     }
+
     .brand { display: flex; align-items: center; gap: 12px; }
+
     .logo {
       width: 56px; height: 56px; border-radius: 10px;
       background: linear-gradient(135deg,var(--accent),var(--accent2));
       display: flex; align-items: center; justify-content: center; color: white; font-weight: 700;
     }
+
     nav a {
       margin-left: 16px; text-decoration: none; color: var(--muted);
       position: relative; padding: 4px 0; transition: color .25s;
     }
+
     nav a:hover { color: var(--accent); }
+
     nav a::after {
       content: ""; position: absolute; left: 0; bottom: -2px; width: 0%; height: 2px; background: var(--accent); transition: .25s;
     }
+
     nav a:hover::after { width: 100%; }
 
-    /* Hero */
     .hero {
       display: grid; grid-template-columns: 1fr 360px;
       gap: 28px; align-items: center; margin-top: 18px;
       background: linear-gradient(135deg, var(--accent), var(--accent2));
       padding: 28px; border-radius: 18px; color: white;
     }
+
     .hero .card { background: rgba(255,255,255,0.95); color: #0f172a; border-left: 6px solid var(--accent); }
 
-    /* Cards */
     .card {
       background: var(--card); padding: 20px; border-radius: 12px;
       box-shadow: 0 6px 18px rgba(12,14,22,0.06);
       transition: transform .2s ease, box-shadow .2s ease;
     }
+
     .card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,0,0,0.12); }
 
     h1 { margin: 0 0 8px; font-size: 28px; }
@@ -85,9 +87,9 @@
       background: var(--accent); color: white; border-radius: 8px;
       text-decoration: none; transition: transform .2s, box-shadow .2s;
       box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-      border: none;
-      cursor: pointer;
+      border: none; cursor: pointer;
     }
+
     .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 14px rgba(0,0,0,0.2); }
 
     .about { display: flex; gap: 18px; align-items: center; margin-top: 18px; }
@@ -97,19 +99,20 @@
     footer { margin-top: 28px; padding: 18px 0; color: var(--muted); font-size: 14px; text-align: center; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap: 16px; }
 
-    /* Sectores */
     .sectores { margin-top: 16px; }
+
     .sector {
       background: #ffffff; border: 1px solid #eef2f7; border-radius: 12px;
       padding: 14px 10px; text-align: center; font-size: 14px; color: var(--muted);
       display: flex; flex-direction: column; align-items: center; gap: 8px;
       transition: transform .2s ease, box-shadow .2s ease;
     }
+
     .sector:hover { transform: translateY(-4px); box-shadow: 0 8px 18px rgba(0,0,0,0.08); }
     .sector span { display: block; }
 
-    /* Botón hamburguesa móvil */
     .hamburger { display: none; font-size: 28px; background: none; border: none; cursor: pointer; color: var(--muted); }
+
     @media(max-width:880px) {
       header { flex-direction: column; align-items: flex-start; gap: 8px; }
       .hamburger { display: block; }
@@ -119,25 +122,17 @@
       .hero { grid-template-columns: 1fr; }
       .logo { width: 48px; height: 48px; }
 
-      /* ✅ Mejoras móvil "Sobre mí" */
       .about { flex-direction: column; align-items: center; text-align: center; }
       .about img {
         width: 130px !important;
         height: 130px !important;
         margin: 0 auto 6px auto;
-        object-fit: contain !important;   /* ✅ evita recorte */
+        object-fit: contain !important;
         object-position: center;
         background: white;
       }
     }
 
-    /* (Opcional) Si quieres ocultar la foto en móviles muy pequeños, descomenta:
-    @media(max-width:420px){
-      .about img { display:none; }
-    }
-    */
-
-    /* Animación de entrada */
     @keyframes slideUpFade {
       0% { opacity: 0; transform: translateY(30px); }
       100% { opacity: 1; transform: translateY(0); }
@@ -145,28 +140,17 @@
 
     .hero .card, .hero aside { animation: slideUpFade 0.8s ease-out forwards; }
 
-    /* Hover suave para tarjeta y foto */
     .hero .card:hover, .hero aside:hover {
       transform: translateY(-6px) scale(1.02);
       box-shadow: 0 16px 32px rgba(0,0,0,0.18);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .hero aside img {
-      border-radius: 18px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .hero aside img:hover {
-      transform: scale(1.03);
-      box-shadow: 0 12px 28px rgba(0,0,0,0.2);
     }
   </style>
 </head>
 
 <body>
 <div class="container">
-  <!-- Header -->
+
   <header>
     <div class="brand">
       <div class="logo">OM</div>
@@ -183,7 +167,6 @@
     </nav>
   </header>
 
-  <!-- Hero -->
   <section class="hero">
     <div>
       <div class="card" style="border-left:6px solid #FF6F3C;">
@@ -212,42 +195,30 @@
     </aside>
   </section>
 
-  <!-- ✅ Servicios -->
   <section class="card" style="margin-top:28px" id="servicios">
     <h3>Servicios</h3>
-    <p style="color:var(--muted);margin-top:6px">
-      Servicios diseñados para cumplir normativa, reducir riesgos y mejorar procesos con acciones claras.
-    </p>
+    <p style="color:var(--muted);margin-top:6px">Servicios diseñados para cumplir normativa, reducir riesgos y mejorar procesos con acciones claras.</p>
 
     <div class="grid" style="margin-top:16px">
       <div class="card">
         <h4 style="margin:0 0 6px">Auditorías higiénico-sanitarias</h4>
-        <p style="margin:0;color:var(--muted);font-size:14px">
-          Revisión de instalaciones, procesos, documentación y personal con informe práctico y plan de mejoras.
-        </p>
+        <p style="margin:0;color:var(--muted);font-size:14px">Revisión de instalaciones, procesos, documentación y personal con informe práctico y plan de mejoras.</p>
       </div>
       <div class="card">
         <h4 style="margin:0 0 6px">APPCC y autocontroles</h4>
-        <p style="margin:0;color:var(--muted);font-size:14px">
-          Elaboración/actualización de APPCC, planes generales de higiene, registros y verificación.
-        </p>
+        <p style="margin:0;color:var(--muted);font-size:14px">Elaboración/actualización de APPCC, planes generales de higiene, registros y verificación.</p>
       </div>
       <div class="card">
         <h4 style="margin:0 0 6px">Toma de muestras y analíticas</h4>
-        <p style="margin:0;color:var(--muted);font-size:14px">
-          Muestreos de superficies, alimentos y agua con interpretación de resultados y medidas correctoras.
-        </p>
+        <p style="margin:0;color:var(--muted);font-size:14px">Muestreos de superficies, alimentos y agua con interpretación de resultados y medidas correctoras.</p>
       </div>
       <div class="card">
         <h4 style="margin:0 0 6px">Formación certificada</h4>
-        <p style="margin:0;color:var(--muted);font-size:14px">
-          Formación in-company y certificación de manipuladores: útil, clara y orientada a tu actividad.
-        </p>
+        <p style="margin:0;color:var(--muted);font-size:14px">Formación in-company y certificación de manipuladores: útil, clara y orientada a tu actividad.</p>
       </div>
     </div>
   </section>
 
-  <!-- ✅ Sobre mí (texto actualizado) -->
   <section class="about card" id="sobre-mi" style="margin-top:28px">
     <img src="foto_miguel.jpg" alt="Foto de Miguel Marfil" loading="lazy"
          style="width:160px;height:160px;border-radius:50%;object-fit:cover;border:4px solid white;box-shadow:0 6px 18px rgba(0,0,0,0.18)" />
@@ -263,7 +234,6 @@
     </div>
   </section>
 
-  <!-- FAQs -->
   <section class="card" style="margin-top:28px" id="faqs">
     <h3>Preguntas Frecuentes</h3>
     <div style="color:var(--muted);font-size:14px;line-height:1.6">
@@ -274,7 +244,6 @@
     </div>
   </section>
 
-  <!-- Sectores -->
   <section class="card" style="margin-top:28px" id="sectores">
     <h3>Sectores con los que trabajamos</h3>
     <div class="grid sectores">
@@ -289,7 +258,6 @@
     </div>
   </section>
 
-  <!-- Experiencia -->
   <section class="card" style="margin-top:28px" id="experiencia">
     <h3>Experiencia Profesional</h3>
     <div style="font-size:14px;color:var(--muted);display:grid;gap:10px;margin-top:10px">
@@ -302,7 +270,6 @@
     </div>
   </section>
 
-  <!-- Certificaciones -->
   <section class="card" style="margin-top:28px" id="certificaciones">
     <h3>Certificaciones y Trayectoria Profesional</h3>
     <div style="font-size:14px;color:var(--muted);display:grid;gap:10px;margin-top:10px">
@@ -315,7 +282,6 @@
     </div>
   </section>
 
-  <!-- Testimonios -->
   <section class="card" style="margin-top:28px">
     <h3>Testimonios</h3>
     <div style="font-size:14px;color:var(--muted);display:grid;gap:10px;margin-top:10px">
@@ -325,13 +291,11 @@
     </div>
   </section>
 
-  <!-- ✅ Contacto (corregido) -->
   <section class="card contact" style="margin-top:28px" id="contacto">
     <h3>Contacto</h3>
     <p style="color:var(--muted)">¿Quieres un presupuesto o más información? Escríbenos o rellena el formulario.</p>
 
     <div style="display:flex;gap:18px;flex-wrap:wrap">
-      <!-- Formulario -->
       <div style="flex:1;min-width:260px">
         <form id="contactForm" action="https://formspree.io/f/mykkyjjo" method="POST">
           <input type="text" name="nombre" placeholder="Nombre" required />
@@ -339,64 +303,25 @@
           <input type="text" name="empresa" placeholder="Empresa / actividad" />
           <textarea name="mensaje" rows="5" placeholder="Mensaje / detalles" required></textarea>
 
-          <!-- Checkbox RGPD -->
           <label style="font-size:12px;color:var(--muted);margin-top:6px;display:block">
             <input type="checkbox" required style="margin-right:6px">
-            Acepto la <a href="/privacidad.html" target="_blank">Política de privacidad</a>
+            Acepto la <a href="/privacidad.html" target="_blank" rel="noopener">Política de privacidad</a>
           </label>
 
           <button class="btn" type="submit">Enviar</button>
           <button class="btn" type="button" onclick="window.open('https://wa.me/34656439232','_blank')">WhatsApp Directo</button>
         </form>
 
-        <!-- Mensaje de gracias oculto -->
         <div id="formThanks" style="display:none; margin-top:12px; color:green; font-weight:600;">
           ¡Gracias! Tu mensaje ha sido enviado. Te responderemos pronto.
         </div>
-
-        <script>
-          const form = document.getElementById('contactForm');
-          const thanks = document.getElementById('formThanks');
-
-          form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const data = new FormData(form);
-
-            fetch(form.action, {
-              method: form.method,
-              body: data,
-              headers: { 'Accept': 'application/json' }
-            })
-            .then(response => {
-              if (response.ok) {
-                form.style.display = 'none';
-                thanks.style.display = 'block';
-
-                setTimeout(() => {
-                  form.reset();
-                  form.style.display = 'block';
-                  thanks.style.display = 'none';
-                }, 5000);
-
-              } else {
-                response.json().then(data => {
-                  alert(data.error || 'Oops! Ha ocurrido un error.');
-                })
-              }
-            })
-            .catch(() => {
-              alert('Oops! Ha ocurrido un error.');
-            });
-          });
-        </script>
       </div>
 
-      <!-- Info Corporativa -->
       <div style="width:260px;min-width:200px">
         <div style="padding:12px;border-radius:8px;background:#fff;border:1px solid #eef2f7">
           <strong>OLINK MARQUEZ AUDITORES Y FORMADORES S.L.</strong>
           <div style="margin-top:8px;color:var(--muted);font-size:14px">Miguel Marfil — Veterinario</div>
-          <div style="margin-top:12px;color:var(--muted);font-size:14px">Tel: 656439232</div>
+          <div style="margin-top:12px;color:var(--muted);font-size:14px">Tel: <a href="tel:+34656439232" style="color:var(--muted); text-decoration:none;">656 439 232</a></div>
           <div style="color:var(--muted);font-size:14px">
             Email: <a href="mailto:info@olinkmarquez.com" style="color:var(--muted); text-decoration:none;">info@olinkmarquez.com</a>
           </div>
@@ -407,26 +332,21 @@
       </div>
     </div>
 
-    <!-- Enlace a privacidad -->
     <div style="margin-top:10px;font-size:12px;color:var(--muted);">
-      <a href="/privacidad.html" target="_blank">Política de privacidad</a>
+      <a href="/privacidad.html" target="_blank" rel="noopener">Política de privacidad</a>
     </div>
   </section>
 
- <!-- Firma -->
-<section class="card" style="margin-top:28px;text-align:center;padding:28px">
-  <h3 style="margin-top:0">Miguel Marfil</h3>
-  <p style="color:var(--muted);margin:0">Veterinario · Auditor Higiénico-Sanitario</p>
-  <p style="color:var(--muted);font-size:14px">OLINK MARQUEZ AUDITORES Y FORMADORES S.L.</p>
-</section>
+  <section class="card" style="margin-top:28px;text-align:center;padding:28px">
+    <h3 style="margin-top:0">Miguel Marfil</h3>
+    <p style="color:var(--muted);margin:0">Veterinario · Auditor Higiénico-Sanitario</p>
+    <p style="color:var(--muted);font-size:14px">OLINK MARQUEZ AUDITORES Y FORMADORES S.L.</p>
+  </section>
 
-
-  <!-- Footer -->
   <footer style="background:white;border-top:1px solid #e6eaf1;padding:28px 0;margin-top:40px;text-align:center;">
     <div>© OLINK MARQUEZ AUDITORES Y FORMADORES S.L. — Todos los derechos reservados</div>
   </footer>
 
-  <!-- Botón WhatsApp -->
   <a href="https://wa.me/34656439232"
      style="position:fixed;bottom:20px;right:20px;background:#25d366;color:white;padding:14px 18px;border-radius:50%;font-size:22px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.18);z-index:100;transition:.2s;"
      onmouseover="this.style.transform='scale(1.1)'"
@@ -438,6 +358,42 @@
     const nav = document.querySelector('.nav-links');
     nav.classList.toggle('active');
   }
+
+  const form = document.getElementById('contactForm');
+  const thanks = document.getElementById('formThanks');
+
+  if (form && thanks) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+
+      fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      })
+      .then(response => {
+        if (response.ok) {
+          form.style.display = 'none';
+          thanks.style.display = 'block';
+
+          setTimeout(() => {
+            form.reset();
+            form.style.display = 'grid';
+            thanks.style.display = 'none';
+          }, 5000);
+        } else {
+          response.json().then(data => {
+            alert(data.error || 'Oops! Ha ocurrido un error.');
+          });
+        }
+      })
+      .catch(() => {
+        alert('Oops! Ha ocurrido un error.');
+      });
+    });
+  }
 </script>
+
 </body>
 </html>
