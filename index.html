@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <!-- SEO -->
-  <title>Veterinario, Auditor Higiénico-Sanitario, Técnico Superior en Prevención de Riesgos Laborales y Formador en Medio Ambiente | OLINK MARQUEZ</title>
-  <meta name="description" content="Veterinario, Auditor Higiénico-Sanitario, Técnico Superior en Prevención de Riesgos Laborales y formador en Medio Ambiente. Auditorías, APPCC, PRL, toma de muestras y formación para empresas en Málaga y provincia. Más de 25 años de experiencia.">
+  <title>Seguridad Alimentaria, PRL y Formación | OLINK MARQUEZ</title>
+  <meta name="description" content="Auditorías, APPCC, Seguridad Alimentaria, PRL y formación para empresas. Formación online asistida por IA y apoyo multilingüe. Málaga y provincia.">
   <meta name="keywords" content="auditor higienico sanitario malaga, appcc malaga, auditoria alimentaria malaga, higiene alimentaria malaga, veterinario auditor, tecnico superior prevencion riesgos laborales malaga, PRL malaga, seguridad alimentaria malaga, formación manipulador alimentos malaga, formación PRL malaga, formación medio ambiente malaga, sostenibilidad, economía circular, olink marquez">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://web.olinkmarquez.com/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="OLINK MARQUEZ | Auditor Higiénico-Sanitario y Técnico Superior en Prevención de Riesgos Laborales">
-  <meta property="og:description" content="Auditorías higiénico-sanitarias, APPCC, toma de muestras, formación y prevención de riesgos laborales para empresas en Málaga.">
+  <meta property="og:title" content="OLINK MARQUEZ | Seguridad Alimentaria, PRL y Formación">
+  <meta property="og:description" content="Auditoría, APPCC, PRL, Medio Ambiente y formación para empresas, con formación asistida por IA y apoyo multilingüe.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://web.olinkmarquez.com/">
 
@@ -157,6 +157,18 @@
       box-shadow: 0 16px 32px rgba(0,0,0,0.18);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    .training-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:18px; margin-top:18px; }
+    .training-card { border-top:4px solid var(--accent2); }
+    .eyebrow { color:var(--accent); font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:.04em; }
+    .nav-cta { background:var(--accent); color:white !important; padding:8px 12px !important; border-radius:8px; }
+    .whatsapp-float { position:fixed;bottom:20px;right:20px;background:#25d366;color:white;padding:12px 16px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.18);z-index:100;transition:.2s; }
+    .whatsapp-float:hover { transform:scale(1.05); }
+    @media(max-width:880px) {
+      .training-grid { grid-template-columns:1fr; }
+      .whatsapp-float { width:52px;height:52px;padding:0;display:flex;align-items:center;justify-content:center;font-size:22px; }
+      .whatsapp-text { display:none; }
+    }
   </style>
 </head>
 
@@ -173,132 +185,116 @@
     </div>
     <button class="hamburger" onclick="toggleMenu()">☰</button>
     <nav class="nav-links">
-  <a href="#servicios">Servicios</a>
-  <a href="#sobre-mi">Sobre mí</a>
-  <a href="#contacto">Contacto</a>
-  <a href="https://web.olinkmarquez.com" target="_blank" rel="noopener">Web Corporativa</a>
-  <a href="https://formacion.olinkmarquez.com" target="_blank" rel="noopener">Formación Online</a>
-  <a href="https://prl.olinkmarquez.com" target="_blank" rel="noopener">Prevención de Riesgos Laborales</a>
-</nav>
+      <a href="#servicios">Servicios</a>
+      <a href="#formacion">Formación</a>
+      <a href="#quienes-somos">Quiénes somos</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#contacto">Contacto</a>
+      <a class="nav-cta" href="https://calendar.app.google/6WEub2jVaHRKHghZ9" target="_blank" rel="noopener">Agenda tu cita</a>
+    </nav>
   </header>
 
   <section class="hero">
     <div>
       <div class="card" style="border-left:6px solid #FF6F3C;">
-        <h1>Auditorías higiénico-sanitarias, formación y prevención de riesgos laborales</h1>
-        <p class="lead">Soluciones prácticas, seguras y ajustadas a la normativa para hostelería, alimentación, formación y prevención en Málaga y provincia.</p>
+        <div class="eyebrow">OLINK MARQUEZ</div>
+        <h1>Auditoría, formación técnica y prevención para empresas</h1>
+        <p class="lead"><strong>Seguridad Alimentaria · Prevención de Riesgos Laborales · Medio Ambiente</strong></p>
+        <p style="color:var(--muted);font-size:14px">Soluciones técnicas basadas en más de 25 años de experiencia, combinadas con nuevas herramientas de formación asistida por Inteligencia Artificial.</p>
+        <p style="color:var(--muted);font-size:14px"><strong>Formación más accesible para equipos internacionales</strong>, con asistentes especializados capaces de orientar al alumno y facilitar la comprensión de los contenidos en distintos idiomas.</p>
         <ul style="color:var(--muted);font-size:14px;line-height:1.6;margin:0 0 16px 0">
-          <li>✔ Auditorías higiénico-sanitarias completas</li>
-          <li>✔ APPCC y planes de autocontrol</li>
-          <li>✔ Toma de muestras y analíticas</li>
-          <li>✔ Formación certificada en seguridad alimentaria</li>
-          <li>✔ Formación y consultoría en Prevención de Riesgos Laborales</li>
+          <li>✔ Auditorías higiénico-sanitarias</li><li>✔ APPCC y planes de autocontrol</li><li>✔ Toma de muestras y analíticas</li>
+          <li>✔ Formación especializada en Seguridad Alimentaria</li><li>✔ Formación y consultoría en Prevención de Riesgos Laborales</li>
+          <li>✔ Formación asistida por IA con apoyo multilingüe</li>
         </ul>
         <a class="btn" href="#contacto">Pedir presupuesto</a>
+        <a class="btn" href="https://calendar.app.google/6WEub2jVaHRKHghZ9" target="_blank" rel="noopener" style="background:var(--accent2)">Agenda tu cita</a>
       </div>
     </div>
-    <aside>
-      <div class="card">
-        <h3>¿Por qué elegirnos?</h3>
-        <ul style="margin:8px 0 0 18px;color:var(--muted)">
-          <li>Más de 25 años de experiencia veterinaria</li>
-          <li>Especialista en seguridad alimentaria</li>
-          <li>Especialista en Prevención de Riesgos Laborales</li>
-          <li>Auditorías claras y accionables</li>
-          <li>Formación útil, práctica y certificada</li>
-          <li>Trato cercano y profesional</li>
-        </ul>
-      </div>
-    </aside>
+    <aside><div class="card"><h3>Experiencia técnica + innovación</h3>
+      <ul style="margin:8px 0 0 18px;color:var(--muted)">
+        <li>Más de 25 años de experiencia profesional</li><li>Especialización en Seguridad Alimentaria y PRL</li>
+        <li>Formación práctica orientada al puesto de trabajo</li><li>Asistentes IA especializados</li>
+        <li>Apoyo a trabajadores en distintos idiomas</li><li>Atención directa y adaptación a cada empresa</li>
+      </ul>
+    </div></aside>
   </section>
 
   <section class="card" style="margin-top:28px" id="servicios">
     <h3>Servicios</h3>
-    <p style="color:var(--muted);margin-top:6px">Servicios diseñados para cumplir normativa, reducir riesgos y mejorar procesos con acciones claras.</p>
-
+    <p style="color:var(--muted);margin-top:6px">Soluciones técnicas adaptadas a cada empresa para cumplir la normativa, reducir riesgos, formar a los trabajadores y mejorar sus procesos.</p>
     <div class="grid" style="margin-top:16px">
-      <div class="card">
-        <h4 style="margin:0 0 6px">Auditorías higiénico-sanitarias</h4>
-        <p style="margin:0;color:var(--muted);font-size:14px">Revisión de instalaciones, procesos, documentación y personal con informe práctico y plan de mejoras.</p>
-      </div>
-      <div class="card">
-        <h4 style="margin:0 0 6px">APPCC y autocontroles</h4>
-        <p style="margin:0;color:var(--muted);font-size:14px">Elaboración/actualización de APPCC, planes generales de higiene, registros y verificación.</p>
-      </div>
-      <div class="card">
-        <h4 style="margin:0 0 6px">Toma de muestras y analíticas</h4>
-        <p style="margin:0;color:var(--muted);font-size:14px">Muestreos de superficies, alimentos y agua con interpretación de resultados y medidas correctoras.</p>
-      </div>
-      <div class="card">
-        <h4 style="margin:0 0 6px">Formación certificada</h4>
-        <p style="margin:0;color:var(--muted);font-size:14px">Formación in-company y certificación de manipuladores: útil, clara y orientada a tu actividad.</p>
-      </div>
-      <div class="card">
-        <h4 style="margin:0 0 6px">Prevención de Riesgos Laborales</h4>
-        <p style="margin:0;color:var(--muted);font-size:14px">Formación PRL, asesoramiento preventivo y apoyo técnico para empresas, trabajadores y autónomos.</p>
-      </div>
+      <div class="card"><h4 style="margin:0 0 6px">🧪 Auditorías higiénico-sanitarias</h4><p style="margin:0;color:var(--muted);font-size:14px">Revisión de instalaciones, procesos, documentación y prácticas de trabajo, con informe técnico y propuesta de medidas correctoras.</p></div>
+      <div class="card"><h4 style="margin:0 0 6px">📋 APPCC y sistemas de autocontrol</h4><p style="margin:0;color:var(--muted);font-size:14px">Diseño, actualización y verificación de APPCC, planes generales de higiene, registros, trazabilidad y procedimientos adaptados a cada actividad.</p></div>
+      <div class="card"><h4 style="margin:0 0 6px">🔬 Muestreo y control analítico</h4><p style="margin:0;color:var(--muted);font-size:14px">Toma de muestras de alimentos, agua y superficies, con interpretación de resultados y propuesta de medidas correctoras.</p></div>
+      <div class="card"><h4 style="margin:0 0 6px">🎓 Formación especializada</h4><p style="margin:0;color:var(--muted);font-size:14px">Formación en Seguridad Alimentaria, manipulación de alimentos y otras materias técnicas, presencial y online, con apoyo de nuevas herramientas de IA.</p></div>
+      <div class="card"><h4 style="margin:0 0 6px">🦺 Prevención de Riesgos Laborales</h4><p style="margin:0;color:var(--muted);font-size:14px">Formación, asesoramiento y apoyo técnico en prevención para empresas, trabajadores y autónomos.</p></div>
+      <div class="card"><h4 style="margin:0 0 6px">🌱 Medio Ambiente y Sostenibilidad</h4><p style="margin:0;color:var(--muted);font-size:14px">Formación y asesoramiento en gestión ambiental, sostenibilidad, residuos, economía circular y buenas prácticas ambientales.</p></div>
     </div>
   </section>
 
-  <section class="about card" id="sobre-mi" style="margin-top:28px">
-    <img src="foto_miguel.jpg" alt="Foto de Miguel Marfil" loading="lazy"
-         style="width:160px;height:160px;border-radius:50%;object-fit:cover;border:4px solid white;box-shadow:0 6px 18px rgba(0,0,0,0.18)" />
-    <div>
-      <h3>Sobre mí</h3>
+  <section class="card" style="margin-top:28px" id="formacion">
+    <div class="eyebrow">Formación especializada</div>
+    <h3>Formación que habla el idioma de tu plantilla</h3>
+    <p style="color:var(--muted)"><strong>La formación es realmente útil cuando el trabajador puede comprenderla, consultarla y aplicarla.</strong></p>
+    <p style="color:var(--muted)">En OLINK MARQUEZ incorporamos asistentes de Inteligencia Artificial especializados que acompañan al alumno durante su formación y pueden atender sus consultas en distintos idiomas.</p>
+    <p style="color:var(--muted)">Una herramienta especialmente útil para empresas con <strong>plantillas internacionales</strong>, facilitando la comprensión de conceptos técnicos y reduciendo las barreras lingüísticas.</p>
+    <p style="color:var(--muted)"><strong>Tecnología al servicio de la formación, siempre sobre contenidos desarrollados y supervisados por profesionales especializados.</strong></p>
+    <div class="training-grid">
+      <div class="card training-card"><h4>🍽️ Seguridad Alimentaria</h4><p style="color:var(--muted);font-size:14px">Manipulación de alimentos, higiene, APPCC, alérgenos y otros contenidos específicos del sector.</p><a class="btn" href="https://formacion.olinkmarquez.com" target="_blank" rel="noopener">Acceder a Formación en Seguridad Alimentaria</a></div>
+      <div class="card training-card"><h4>🦺 Prevención de Riesgos Laborales</h4><p style="color:var(--muted);font-size:14px">Formación preventiva y contenidos orientados a trabajadores, autónomos y empresas.</p><a class="btn" href="https://prl.olinkmarquez.com" target="_blank" rel="noopener">Acceder a Formación PRL</a></div>
+    </div>
+  </section>
 
-      <p style="color:var(--muted)">
-        Veterinario colegiado, Auditor Higiénico-Sanitario y Técnico Superior en Prevención de Riesgos Laborales, con más de 25 años de experiencia en inspección, auditoría, formación y consultoría para empresas.
-      </p>
-
-      <p style="margin:8px 0;color:var(--muted)">
-        Junto a Nieves Márquez fundé OLINK MARQUEZ AUDITORES Y FORMADORES S.L., combinando experiencia técnica y formación especializada para ayudar a empresas a cumplir la normativa, mejorar sus procesos y reducir riesgos.
-      </p>
-
-      <p style="margin:8px 0;color:var(--muted)">
-        <strong>Áreas de especialización:</strong> Seguridad Alimentaria, APPCC, auditorías higiénico-sanitarias, Prevención de Riesgos Laborales, formación en Medio Ambiente, toma de muestras, formación profesional y peritajes técnicos.
-      </p>
+  <section class="about card" id="quienes-somos" style="margin-top:28px">
+    <img src="foto_miguel.jpg" alt="Miguel Marfil - OLINK MARQUEZ" loading="lazy" style="width:160px;height:160px;border-radius:50%;object-fit:cover;border:4px solid white;box-shadow:0 6px 18px rgba(0,0,0,0.18)" />
+    <div><h3>Quiénes somos</h3>
+      <p style="color:var(--muted)"><strong>OLINK MARQUEZ AUDITORES Y FORMADORES S.L.</strong> nace de la experiencia profesional de Miguel Marfil y Nieves Márquez con el objetivo de ofrecer a empresas y profesionales soluciones especializadas en formación, auditoría y consultoría técnica.</p>
+      <p style="margin:8px 0;color:var(--muted)"><strong>Miguel Marfil</strong>, veterinario colegiado, Auditor Higiénico-Sanitario y Técnico Superior en Prevención de Riesgos Laborales, cuenta con más de 25 años de experiencia en inspección, auditoría, formación y consultoría para empresas.</p>
+      <p style="margin:8px 0;color:var(--muted)">Nuestra actividad integra <strong>Seguridad Alimentaria, Prevención de Riesgos Laborales y Medio Ambiente</strong>, incorporando nuevas herramientas de Inteligencia Artificial para mejorar la formación, facilitar el acceso al conocimiento y adaptarlo a plantillas cada vez más diversas e internacionales.</p>
+      <p style="margin:8px 0;color:var(--muted)"><strong>Áreas de especialización:</strong> Seguridad Alimentaria, APPCC, auditorías higiénico-sanitarias, Prevención de Riesgos Laborales, Medio Ambiente, toma de muestras, formación profesional y peritajes técnicos.</p>
     </div>
   </section>
 
   <section class="card" style="margin-top:28px" id="faqs">
-    <h3>Preguntas Frecuentes</h3>
+    <h3>Preguntas frecuentes</h3>
     <div style="color:var(--muted);font-size:14px;line-height:1.6">
-      <p><strong>¿Qué incluye una auditoría higiénico-sanitaria?</strong><br>Revisión de instalaciones, procesos, APPCC, personal y toma de muestras.</p>
-      <p><strong>¿Cada cuánto se recomienda realizar auditorías?</strong><br>Depende del riesgo, pero suele ser mensual o trimestral.</p>
-      <p><strong>¿Trabajas con pequeños negocios?</strong><br>Sí, desde bares hasta hoteles, industrias, centros educativos o pequeños negocios alimentarios.</p>
-      <p><strong>¿Puedes elaborar un APPCC desde cero?</strong><br>Sí, incluyendo formación, registros, verificación y adaptación a la actividad real del establecimiento.</p>
-      <p><strong>¿También trabajas en Prevención de Riesgos Laborales?</strong><br>Sí. Soy Técnico Superior en Prevención de Riesgos Laborales y desarrollo formación PRL, apoyo preventivo y contenidos prácticos para empresas y trabajadores.</p>
+      <p><strong>¿Qué incluye una auditoría higiénico-sanitaria?</strong><br>Revisión de instalaciones, procesos, documentación, sistemas de autocontrol, prácticas de trabajo y, cuando procede, toma de muestras y propuesta de medidas correctoras.</p>
+      <p><strong>¿Cada cuánto se recomienda realizar una auditoría?</strong><br>La periodicidad depende del tipo de actividad, nivel de riesgo, resultados anteriores y necesidades de cada empresa. Podemos establecer un programa de seguimiento adaptado a cada establecimiento.</p>
+      <p><strong>¿Trabajáis con pequeñas empresas?</strong><br>Sí. Adaptamos nuestros servicios tanto a pequeños establecimientos y autónomos como a hoteles, industrias y otras organizaciones.</p>
+      <p><strong>¿Podéis elaborar o actualizar un APPCC?</strong><br>Sí. Elaboramos y actualizamos sistemas APPCC y autocontroles adaptándolos a la actividad real del establecimiento.</p>
+      <p><strong>¿Ofrecéis formación online?</strong><br>Sí. Disponemos de formación online en Seguridad Alimentaria y Prevención de Riesgos Laborales, además de formación presencial adaptada a las necesidades de cada empresa.</p>
+      <p><strong>¿Cómo se utiliza la Inteligencia Artificial en la formación?</strong><br>Nuestros asistentes especializados complementan los contenidos formativos y permiten al alumno realizar consultas, resolver dudas y recibir explicaciones adicionales durante su aprendizaje.</p>
+      <p><strong>¿La formación puede adaptarse a trabajadores que hablan otros idiomas?</strong><br>Nuestros asistentes pueden interactuar con el alumno en distintos idiomas, facilitando la comprensión de los contenidos y reduciendo barreras lingüísticas en plantillas internacionales.</p>
+      <p><strong>¿La Inteligencia Artificial sustituye al formador?</strong><br>No. La IA actúa como herramienta de apoyo. Los contenidos y el planteamiento formativo son desarrollados y supervisados por profesionales especializados.</p>
     </div>
   </section>
 
   <section class="card" style="margin-top:28px" id="sectores">
     <h3>Sectores con los que trabajamos</h3>
     <div class="grid sectores">
-      <div class="sector">🍽️<span>Hostelería</span></div>
-      <div class="sector">🥗<span>Catering</span></div>
-      <div class="sector">🏭<span>Industrias</span></div>
-      <div class="sector">🍞<span>Obradores</span></div>
-      <div class="sector">🏨<span>Hoteles</span></div>
-      <div class="sector">👨‍🏫<span>Centros escolares</span></div>
-      <div class="sector">🌊<span>Pescaderías</span></div>
-      <div class="sector">🧼<span>Empresas de limpieza</span></div>
+      <div class="sector">🍽️<span>Hostelería y restauración</span></div><div class="sector">🏨<span>Hoteles y alojamientos</span></div>
+      <div class="sector">🏭<span>Industria alimentaria</span></div><div class="sector">🌱<span>Sector agroalimentario</span></div>
+      <div class="sector">🍞<span>Obradores y comercios alimentarios</span></div><div class="sector">🥗<span>Catering y colectividades</span></div>
+      <div class="sector">🎓<span>Centros educativos y de formación</span></div><div class="sector">🧼<span>Empresas de servicios y limpieza</span></div>
     </div>
   </section>
 
   <section class="card" style="margin-top:28px" id="experiencia">
-    <h3>Experiencia Profesional</h3>
+    <h3>Experiencia profesional</h3>
+    <p style="color:var(--muted)"><strong>Más de 25 años de experiencia en inspección, auditoría, laboratorio y formación.</strong></p>
     <div style="font-size:14px;color:var(--muted);display:grid;gap:10px;margin-top:10px">
       <div><strong>DEFRA – Reino Unido</strong><br>Control de la epidemia de Fiebre Aftosa, inspecciones y estudios epidemiológicos.</div>
       <div><strong>Instituto Andaluz de Patología Infecciosa</strong><br>Trabajo como microbiólogo, parasitólogo, hematólogo y anatomopatólogo.</div>
       <div><strong>Servicio Andaluz de Salud</strong><br>Interino como veterinario de apoyo en varias agrupaciones provinciales.</div>
-      <div><strong>Diversey/Solenis – Auditor</strong><br>Auditorías, APPCC, formación y seguimiento en empresas alimentarias (2003–actualidad).</div>
+      <div><strong>Auditoría higiénico-sanitaria y Seguridad Alimentaria</strong><br>Más de 20 años de experiencia continuada en auditorías, APPCC, formación y seguimiento de establecimientos y empresas alimentarias, colaborando con compañías especializadas como Diversey/Solenis.</div>
       <div><strong>Docente especializado</strong><br>Manipuladores de alimentos, Prevención de Riesgos Laborales, higiene y seguridad alimentaria desde 2002.</div>
       <div><strong>Inspección Veterinaria – Málaga</strong><br>Inspección y clasificación de establecimientos veterinarios (2001–actualidad).</div>
     </div>
   </section>
 
   <section class="card" style="margin-top:28px" id="certificaciones">
-    <h3>Certificaciones y Trayectoria Profesional</h3>
+    <h3>Formación, acreditaciones y especialización</h3>
     <div style="font-size:14px;color:var(--muted);display:grid;gap:10px;margin-top:10px">
       <div><strong>🎓 Licenciado en Veterinaria</strong><br>Universidad de Córdoba — 1998</div>
       <div><strong>🏛️ Colegiación Veterinaria</strong><br>Ilustre Colegio Oficial de Veterinarios de Málaga — Nº 904</div>
@@ -327,71 +323,39 @@
 <div><strong>🇬🇧 Miembro del RCVS</strong><br>Royal College of Veterinary Surgeons (Reino Unido)</div>
     </div>
   </section>
-
-  <section class="card" style="margin-top:28px">
-    <h3>Testimonios</h3>
-    <div style="font-size:14px;color:var(--muted);display:grid;gap:10px;margin-top:10px">
-      <div>⭐️⭐️⭐️⭐️⭐️ — "Un servicio impecable. Las auditorías son claras y muy prácticas. Miguel nos ha ayudado muchísimo a mejorar los procesos."</div>
-      <div>⭐️⭐️⭐️⭐️⭐️ — "Formación excelente, muy cercana y útil para el personal. Lo recomendamos totalmente."</div>
-      <div>⭐️⭐️⭐️⭐️⭐️ — "Profesionalidad y resultados. Muy satisfechos con las auditorías y el seguimiento mensual."</div>
-    </div>
-  </section>
-
   <section class="card contact" style="margin-top:28px" id="contacto">
-    <h3>Contacto</h3>
-    <p style="color:var(--muted)">¿Quieres un presupuesto o más información? Escríbenos o rellena el formulario.</p>
-
+    <h3>¿Hablamos?</h3>
+    <p style="color:var(--muted)">Cuéntanos qué necesita tu empresa y estudiaremos la solución más adecuada en auditoría, formación, Seguridad Alimentaria, PRL o Medio Ambiente.</p>
+    <div style="margin-bottom:16px"><a class="btn" href="https://calendar.app.google/6WEub2jVaHRKHghZ9" target="_blank" rel="noopener" style="background:var(--accent2)">📅 Agenda tu cita</a></div>
     <div style="display:flex;gap:18px;flex-wrap:wrap">
       <div style="flex:1;min-width:260px">
+        <h4 style="margin-top:0">📩 Solicitar información o presupuesto</h4>
         <form id="contactForm" action="https://formspree.io/f/mykkyjjo" method="POST">
           <input type="text" name="nombre" placeholder="Nombre" required />
           <input type="email" name="email" placeholder="Correo electrónico" required />
           <input type="text" name="empresa" placeholder="Empresa / actividad" />
           <textarea name="mensaje" rows="5" placeholder="Mensaje / detalles" required></textarea>
-
-          <label style="font-size:12px;color:var(--muted);margin-top:6px;display:block">
-            <input type="checkbox" required style="margin-right:6px">
-            Acepto la <a href="/privacidad.html" target="_blank" rel="noopener">Política de privacidad</a>
-          </label>
-
-          <button class="btn" type="submit">Enviar</button>
-          <button class="btn" type="button" onclick="window.open('https://wa.me/34656439232','_blank')">WhatsApp Directo</button>
+          <label style="font-size:12px;color:var(--muted);margin-top:6px;display:block"><input type="checkbox" required style="margin-right:6px">Acepto la <a href="/privacidad.html" target="_blank" rel="noopener">Política de privacidad</a></label>
+          <button class="btn" type="submit">Enviar solicitud</button>
         </form>
-
-        <div id="formThanks" style="display:none; margin-top:12px; color:green; font-weight:600;">
-          ¡Gracias! Tu mensaje ha sido enviado. Te responderemos pronto.
-        </div>
+        <div id="formThanks" style="display:none; margin-top:12px; color:green; font-weight:600;">¡Gracias! Tu mensaje ha sido enviado. Te responderemos pronto.</div>
       </div>
-
-      <div style="width:260px;min-width:200px">
+      <div style="width:280px;min-width:220px">
         <div style="padding:12px;border-radius:8px;background:#fff;border:1px solid #eef2f7">
           <strong>OLINK MARQUEZ AUDITORES Y FORMADORES S.L.</strong>
           <div style="margin-top:8px;color:var(--muted);font-size:14px">Miguel Marfil — Veterinario, Auditor Higiénico-Sanitario y Técnico Superior en Prevención de Riesgos Laborales</div>
-          <div style="margin-top:12px;color:var(--muted);font-size:14px">Tel: <a href="tel:+34656439232" style="color:var(--muted); text-decoration:none;">656 439 232</a></div>
-          <div style="color:var(--muted);font-size:14px">
-            Email: <a href="mailto:info@olinkmarquez.com" style="color:var(--muted); text-decoration:none;">info@olinkmarquez.com</a>
+          <div style="margin-top:12px;color:var(--muted);font-size:14px">Tel: <a href="tel:+34656439232" style="color:var(--muted)">656 439 232</a></div>
+          <div style="color:var(--muted);font-size:14px">Email: <a href="mailto:info@olinkmarquez.com" style="color:var(--muted)">info@olinkmarquez.com</a></div>
+          <div style="margin-top:12px;color:var(--muted);font-size:13px;line-height:1.8">
+            <a href="https://web.olinkmarquez.com/" target="_blank" rel="noopener">Web corporativa</a><br>
+            <a href="https://formacion.olinkmarquez.com" target="_blank" rel="noopener">Campus de Seguridad Alimentaria</a><br>
+            <a href="https://prl.olinkmarquez.com" target="_blank" rel="noopener">Campus de Prevención de Riesgos Laborales</a>
           </div>
-  <div style="margin-top:10px;color:var(--muted);font-size:13px">
-Web corporativa: web.olinkmarquez.com<br>
-Campus formación: formacion.olinkmarquez.com<br>
-Área PRL: prl.olinkmarquez.com
-</div>
-          <div style="margin-top:10px;color:var(--muted);font-size:13px">
-            Málaga y provincia — Seguridad alimentaria, auditoría, formación y prevención de riesgos laborales.
-          </div>
+          <div style="margin-top:12px;color:var(--muted);font-size:13px">Málaga y provincia — Seguridad Alimentaria, auditoría, formación, PRL y Medio Ambiente.</div>
         </div>
       </div>
     </div>
-
-    <div style="margin-top:10px;font-size:12px;color:var(--muted);">
-      <a href="/privacidad.html" target="_blank" rel="noopener">Política de privacidad</a>
-    </div>
-  </section>
-
-  <section class="card" style="margin-top:28px;text-align:center;padding:28px">
-    <h3 style="margin-top:0">Miguel Marfil</h3>
-    <p style="color:var(--muted);margin:0">Veterinario · Auditor Higiénico-Sanitario · Técnico Superior PRL</p>
-    <p style="color:var(--muted);font-size:14px">OLINK MARQUEZ AUDITORES Y FORMADORES S.L.</p>
+    <div style="margin-top:10px;font-size:12px;color:var(--muted);"><a href="/privacidad.html" target="_blank" rel="noopener">Política de privacidad</a></div>
   </section>
 
   <footer style="background:white;border-top:1px solid #e6eaf1;padding:28px 0;margin-top:40px;text-align:center;">
@@ -404,10 +368,7 @@ Campus formación: formacion.olinkmarquez.com<br>
     <div>© OLINK MARQUEZ AUDITORES Y FORMADORES S.L. — Todos los derechos reservados</div>
   </footer>
 
-  <a href="https://wa.me/34656439232"
-     style="position:fixed;bottom:20px;right:20px;background:#25d366;color:white;padding:14px 18px;border-radius:50%;font-size:22px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.18);z-index:100;transition:.2s;"
-     onmouseover="this.style.transform='scale(1.1)'"
-     onmouseout="this.style.transform='scale(1)'">💬</a>
+  <a class="whatsapp-float" href="https://wa.me/34656439232?text=Hola%2C%20contacto%20desde%20la%20web%20de%20Olink%20M%C3%A1rquez.%20Me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20sobre%20vuestros%20servicios." target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">💬 <span class="whatsapp-text">¿Hablamos por WhatsApp?</span></a>
 </div>
 
 <script>
